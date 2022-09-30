@@ -1,6 +1,6 @@
 ---
 title: "Lab 01 - Plastic waste"
-author: "INSERT NAME HERE"
+author: "Eddie Jiang"
 date: "`r Sys.Date()`"
 output: html_document
 ---
@@ -20,9 +20,10 @@ plastic_waste <- read_csv("data/plastic-waste.csv")
 ### Exercise 1
 
 *Remove this text, and add your answer for Exercise 1 here.*
+this is my answer
 
 ```{r plastic-waste-continent}
-# remove this comment and add the code for Exercise 1 here
+ggplot(data = plastic_waste, mapping = aes(x = plastic_waste_per_cap, color = continent))+geom_density()
 ```
 
 ### Exercise 2
@@ -74,7 +75,7 @@ plastic_waste <- read_csv("data/plastic-waste.csv")
 ### Exercise 8
 
 *Remove this text, and add your answer for Exercise 8 here.*
-
+this is my answer
 ```{r recreate-viz}
 plastic_waste_edit <- plastic_waste %>% 
   mutate(coastal_pop_prop = coastal_pop / total_pop) %>%
