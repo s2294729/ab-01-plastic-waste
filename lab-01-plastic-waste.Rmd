@@ -22,20 +22,42 @@ plastic_waste <- read_csv("data/plastic-waste.csv")
 *Remove this text, and add your answer for Exercise 1 here.*
 this is my answer
 
+
 ```{r plastic-waste-continent}
 ggplot(data = plastic_waste, mapping = aes(x = plastic_waste_per_cap, color = continent))+geom_density()
 ```
 
-### Exercise 2
+```{r plastic-waste-continent}
+ggplot(data = plastic_waste, 
+       mapping = aes(x = plastic_waste_per_cap, 
+                     color = continent, 
+                     fill = continent)) +
+  geom_density()
+```
+```{r plastic-waste-continent}
+ggplot(data = plastic_waste, 
+       mapping = aes(x = plastic_waste_per_cap, 
+                     color = continent, 
+                     fill = continent)) +
+  geom_density(alpha = 0.7)
+```
 
+
+### Exercise 2
+This is my answer
+As I change the value of alpha, the fillin of gaph is more transparent 
 ```{r plastic-waste-density}
-# remove this comment and add the code for Exercise 2 here
+ggplot(data = plastic_waste, 
+       mapping = aes(x = plastic_waste_per_cap, 
+                     color = continent, 
+                     fill = continent)) +
+  geom_density(alpha = 0.2)
 ```
 
 ### Exercise 3
 
-*Remove this text, and add your answer for Exercise 3 here.*
-
+*the color and fill reprensts different continents(variables).Color is another visual cue that we map to region
+alpha level show the density of colour.The transparency is all the same*
 ### Exercise 4
 
 *Remove this text, and add your answer for Exercise 4 here.*
